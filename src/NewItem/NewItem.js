@@ -17,10 +17,14 @@ class NewItem extends Component {
     this.setState({ [event.target.name]: event.target.value });
   }
 
+  cleanInputs = () => {
+   this.setState({ name: '', description: '', price: ''});
+ }
+
 
   submitItem = event => {
-    console.log(this)
    event.preventDefault();
+   this.cleanInputs()
    this.props.newItem(this.state);
  }
 
@@ -52,9 +56,17 @@ class NewItem extends Component {
           onChange={event => this.handleChange(event)}
         />
 
+        <input
+          type='text'
+          placeholder='IMG: Leave empty for default img!'
+          name='img'
+          value={this.state.img}
+          onChange={event => this.handleChange(event)}
+           />
 
+           <label for="img">Keep default img or add your own URL!</label>
 
-         <button onClick={event => this.submitItem(event)}>SUBMIT</button>
+          <button onClick={event => this.submitItem(event)}>SUBMIT</button>
       </form>
     )
   }
