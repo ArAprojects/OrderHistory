@@ -63,9 +63,7 @@ class NewItem extends Component {
           value={this.state.img}
           onChange={event => this.handleChange(event)}
            />
-
-           <label htmlFor="img">Keep default img or add your own URL!</label>
-
+           
           <button onClick={event => this.submitItem(event)}>SUBMIT</button>
       </form>
     )
