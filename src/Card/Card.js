@@ -1,24 +1,26 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ( {purchases} ) => {
+const Card = ( {purchaseData} ) => {
+    const displayPurchases = purchaseData.map(card => {
+      const { name, img, description, price  } = card;
 
-  const cardPurchases = purchases.map(idea => {
+
+      return (
+          <div>
+          {name && <p>Item: {name}</p>}
+          <img className= "item-image" alt="" src={img}></img>
+          {description && <p>description: {description}</p>}
+          {price && <p>price: {pri}}
+          </div>
+      )
+    });
+
     return (
-      <Card
-        title={purchases.name}
-        description={purchases.img}
-        price ={purchases.price}
-        key={purchases.id}
-      />
-    )
-  })
-
-  return (
-    <div className='card-container'>
-      {cardPurchases}
+    <div className="cardContainer">
+      {displayPurchases}
     </div>
-  )
+  );
 }
 
 export default Card;
