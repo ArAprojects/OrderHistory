@@ -9,9 +9,9 @@ const Card = ( {purchaseData} ) => {
       return (
           <div className="card">
           {name && <p>Item: {name}</p>}
-          <img className= "item-image" alt="" src={img}></img>
-          {description && <p>description: {description}</p>}
-          {price && <p>price: ${price}</p>}
+          <img className= "item-image" alt="item" src={img}></img>
+          {description && <p>Description: {description}</p>}
+          {price && <p>Price: ${price}</p>}
           </div>
       )
     });

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from '../Card/Card'
+import NewItem from '../NewPurchase/NewItem'
 import './App.css';
 
 class App extends Component {
