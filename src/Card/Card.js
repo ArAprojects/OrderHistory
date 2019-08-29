@@ -7,11 +7,11 @@ const Card = ( {purchaseData} ) => {
 
 
       return (
-          <div>
+          <div className="card">
           {name && <p>Item: {name}</p>}
           <img className= "item-image" alt="" src={img}></img>
           {description && <p>description: {description}</p>}
-          {price && <p>price: {pri}}
+          {price && <p>price: ${price}</p>}
           </div>
       )
     });
