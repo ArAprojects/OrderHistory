@@ -7,6 +7,12 @@ form {
 
 input,
 button {
-  width: 100px;
+  width: 250px;
+  height: 30px;
   margin: 5px;
+}
+
+button {
+  height: 35px;
+  background-color: #83f983
 }

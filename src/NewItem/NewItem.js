@@ -63,8 +63,8 @@ class NewItem extends Component {
           value={this.state.img}
           onChange={event => this.handleChange(event)}
            />
-           
-          <button onClick={event => this.submitItem(event)}>SUBMIT</button>
+
+          <button onClick={event => this.submitItem(event)}>Add New Item!</button>
       </form>
     )
   }
