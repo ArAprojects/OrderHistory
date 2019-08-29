@@ -8,7 +8,7 @@ class NewItem extends Component {
       name: '',
       description: '',
       price: '',
-      img: '',
+      img: "https://image.freepik.com/free-vector/modern-new-arrival-composition-with-realistic-design_23-2147885434.jpg",
       id: Date.now()
     }
   }
@@ -52,13 +52,7 @@ class NewItem extends Component {
           onChange={event => this.handleChange(event)}
         />
 
-        <input
-          type='text'
-          placeholder='img URL'
-          name='img'
-          value={this.state.img}
-          onChange={event => this.handleChange(event)}
-        />
+
 
          <button onClick={event => this.submitItem(event)}>SUBMIT</button>
       </form>
