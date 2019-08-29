@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Card from '../Card/Card'
-import NewItem from '../NewPurchase/NewItem'
+import NewItem from '../NewItem/NewItem'
 import './App.css';
 
 class App extends Component {
@@ -26,6 +26,7 @@ componentDidMount(){
           <div className='purchase-form'>
           </div>
         </header>
+        <NewItem />
         <div className='purchase-container'>
           <Card purchaseData = {this.state.purchases} />
         </div>

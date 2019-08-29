@@ -15,19 +15,18 @@ class NewItem extends Component {
 
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
-    this.setState({id: this.props.students[this.props.students.length - 1].id + 1 })
   }
 
 
   addItem = event => {
    event.preventDefault();
    this.props.addItem(this.state);
-   console.log(this.props.students)
  }
 
   render() {
     return (
       <form>
+          <h2>Add a new Item!</h2>
         <input
           type='text'
           placeholder='Item Name'
