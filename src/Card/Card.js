@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Card.css';
 
 const Card = ( {purchaseData, deleteItem} ) => {
@@ -8,11 +9,15 @@ const Card = ( {purchaseData, deleteItem} ) => {
 
       return (
           <div className="card" key={card.id}>
-          {name && <h2>Item: {name}</h2>}
-          <img className= "item-image" alt="item" src={img}></img>
-          {description && <p>Description: {description}</p>}
-          {price && <p>Price: ${price}</p>}
-          <button onClick={() => deleteItem(card.id)} className="delete-button">Delete Item</button>
+            <img className= "item-image" alt="item" src={img}></img>
+            <div className= "name-image-container">
+            {name && <h2>Item: {name}</h2>}
+            {description && <p>Description: {description}</p>}
+            </div>
+            <div className="button-price-container">
+              {price && <h2>Price: ${price}</h2>}
+              <button onClick={() => deleteItem(card.id)} className="delete-button">Remove</button>
+            </div>
           </div>
       )
     });
@@ -24,4 +29,10 @@ const Card = ( {purchaseData, deleteItem} ) => {
   );
 }
 
+
 export default Card;
+
+Card.propTypes = {
+  purchaseData: PropTypes.array.isRequired,
+  deleteItem: PropTypes.func.isRequired
+};

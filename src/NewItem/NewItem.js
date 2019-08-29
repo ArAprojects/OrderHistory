@@ -64,9 +64,7 @@ class NewItem extends Component {
           onChange={event => this.handleChange(event)}
            />
 
-           <label for="img">Keep default img or add your own URL!</label>
-
-          <button onClick={event => this.submitItem(event)}>SUBMIT</button>
+          <button onClick={event => this.submitItem(event)}>Add New Item!</button>
       </form>
     )
   }

@@ -3,10 +3,23 @@
   background-color: white;
   border: 2px solid black;
   margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 4px 4px #888888;
 }
 
 .item-image {
   height: 100px;
+}
+
+.delete-button {
+  margin: 10px;
+  background-color: red;
+  width: 150px;
+  height: 50px;
+  color: white;
+  font-size: 18px;
 }
 
 p {
