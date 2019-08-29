@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Card.css';
 
 const Card = ( {purchaseData, deleteItem} ) => {
@@ -30,3 +31,8 @@ const Card = ( {purchaseData, deleteItem} ) => {
 
 
 export default Card;
+
+Card.propTypes = {
+  purchaseData: PropTypes.array.isRequired,
+  deleteItem: PropTypes.func.isRequired
+};
