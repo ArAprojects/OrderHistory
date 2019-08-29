@@ -5,11 +5,11 @@ class NewItem extends Component {
   constructor() {
     super();
     this.state = {
-      img: '',
       name: '',
       description: '',
       price: '',
-      id: ''
+      img: '',
+      id: Date.now()
     }
   }
 
@@ -18,9 +18,10 @@ class NewItem extends Component {
   }
 
 
-  addItem = event => {
+  submitItem = event => {
+    console.log(this)
    event.preventDefault();
-   this.props.addItem(this.state);
+   this.props.newItem(this.state);
  }
 
   render() {
@@ -59,7 +60,7 @@ class NewItem extends Component {
           onChange={event => this.handleChange(event)}
         />
 
-         <button onClick={event => this.addItem(event)}>SUBMIT</button>
+         <button onClick={event => this.submitItem(event)}>SUBMIT</button>
       </form>
     )
   }

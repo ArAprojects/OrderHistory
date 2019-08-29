@@ -16,8 +16,8 @@ componentDidMount(){
   fetch("http://localhost:3001/api/v1/purchases").then(res => res.json()).then(data => this.setState({purchases: data}))
 }
 
-newItem = (newItem) => {
-  this.setState({purchase: [...this.state.purchases, newItem]})
+newItem = (newCard) => {
+  this.setState({purchases: [...this.state.purchases, newCard]})
 }
 
 
