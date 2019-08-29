@@ -16,6 +16,10 @@ componentDidMount(){
   fetch("http://localhost:3001/api/v1/purchases").then(res => res.json()).then(data => this.setState({purchases: data}))
 }
 
+newItem = (newItem) => {
+  this.setState({purchase: [...this.state.purchases, newItem]})
+}
+
 
   render() {
     console.log(this.state)
@@ -26,7 +30,7 @@ componentDidMount(){
           <div className='purchase-form'>
           </div>
         </header>
-        <NewItem />
+        <NewItem newItem = {this.newItem}/>
         <div className='purchase-container'>
           <Card purchaseData = {this.state.purchases} />
         </div>
