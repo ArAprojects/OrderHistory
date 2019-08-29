@@ -20,6 +20,11 @@ newItem = (newCard) => {
   this.setState({purchases: [...this.state.purchases, newCard]})
 }
 
+deleteItem = (id) => {
+  const remainingItems = this.state.purchases.filter(item => item.id !== id);
+  this.setState({ purchases: remainingItems });
+}
+
 
   render() {
     console.log(this.state)
@@ -32,7 +37,7 @@ newItem = (newCard) => {
         </header>
         <NewItem newItem = {this.newItem}/>
         <div className='purchase-container'>
-          <Card purchaseData = {this.state.purchases} />
+          <Card purchaseData = {this.state.purchases} deleteItem={this.deleteItem} />
         </div>
       </div>
     );
